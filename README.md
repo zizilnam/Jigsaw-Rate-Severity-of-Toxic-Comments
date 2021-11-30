@@ -71,9 +71,9 @@ Past Jigsaw Competitions in Kaggle 
 - more_toxic : 상대적으로 유해한 코멘트
 
 #### [특 징]
-1) Pair Sentences 1세트당 3회 평가받음.  (3명의 다른 Worker가 평가)
-2) Worker 1명당 평가한 Pair Sentences 수가 다름. ( 예: 8, 68, ...)
-![image](https://user-images.githubusercontent.com/69458840/144070121-c5920a65-0a35-4a49-921d-667fa29e3b81.png)
+- 1) Pair Sentences 1세트당 3회 평가받음.  (3명의 다른 Worker가 평가)
+- 2) Worker 1명당 평가한 Pair Sentences 수가 다름. ( 예: 8, 68, ...)
+
 
 ![image](https://user-images.githubusercontent.com/69458840/144070042-b7404cc7-8984-4983-b857-24094a901e10.png)
 
