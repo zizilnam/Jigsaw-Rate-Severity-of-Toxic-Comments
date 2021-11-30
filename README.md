@@ -18,7 +18,7 @@
 
 ### Evaluation Metric
 
-Evaluation (Official)
+#### Evaluation (Official)
 
 Score is not constrained to any numeric range (e.g., you can predict [0, 1] or [-999, 999]).
 
@@ -30,17 +30,23 @@ There is no tie breaking; tied comment scores will always be evaluated as 0. You
 - Target Column: Degree of Toxic (Classes)
 - Loss function: nn.BCEWithLogitsLoss()
 
+#### MRL(Margin Ranking Loss)
+
+Loss(x1, x2, y) = max(0, -y * (x1 – x2) + margin)
+
+Idea: more_toxic과 less_toxic 간의 차이를 더 벌려서 학습하면 더 좋지 않을까?
+
+한계: x1과 x2의 차이가 적은 경우에 학습이 잘 되지 않는다. 순위를 나누는데 적합하지 않다.
+
+MSE(Mean Squared Error)
+
+
+MRL보다 학습이 덜 될수는 있지만, x1, x2의 차이가 적은 경우에도 순위를 분류할 수 있다.
+우리 모델의 목표는 문장들의 toxic한 정도를 비교해 순위를 예측하는 것이므로 MSE를 사용할 예정이다.
+![image](https://user-images.githubusercontent.com/69458840/144067803-935ae262-1544-47a7-8fb4-9d6b1f32f3f5.png)
 
 ## 데이터 정의
 
-## 문제 정의
-![image](https://user-images.githubusercontent.com/69458840/144067475-43ac80ff-bfc9-4d0a-b7ed-7930ce49a227.png)
-
-![image](https://user-images.githubusercontent.com/69458840/144067517-60994206-5325-4510-9e66-9ce7ac9f1850.png)
-
-![image](https://user-images.githubusercontent.com/69458840/144067545-4bfa1a35-e77d-4eee-b9e3-b606982f056b.png)
-
-![image](https://user-images.githubusercontent.com/69458840/144067567-22b7ca33-23bc-4508-be18-af82645db6da.png)
 
 
 작성중...
