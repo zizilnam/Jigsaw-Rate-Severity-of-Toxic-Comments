@@ -90,14 +90,14 @@ Past Jigsaw Competitions in Kaggle 
 ### “Ruddit: Norms of Offensiveness for English Reddit Comments”
 - Hada et al. 2021. Association for Computational Linguistics  (ACL)
 - 소셜 뉴스 웹사이트인 Reddit에 사용자들이 남긴 comment를 데이터로 사용
-- 기존의 점수측정 방법론의 한계점을 해결한 ‘Best-Worst Scaling’라는 방법을 통해 신뢰도 높은 comment의 공격성 정도에 대한 점수(offensiveness scores)를 산출하여새로운 데이터 셋을 생성하고 제안하였음
+- 기존의 점수측정 방법론의 한계점을 해결한 ‘Best-Worst Scaling’라는 방법을 통해 신뢰도 높은 comment의 공격성 정도에 대한 점수(offensiveness scores)를 산출하여 새로운 데이터 셋을 생성하고 제안하였음
 
-- 일반적으로 많이 사용하는 neural 모델들에 대해서 제안한  데이터셋의 공격성 점수 예측 성능을 보기 위해 실험을 진행함
+- 일반적으로 많이 사용하는 neural 모델들에 대해서 제안한  데이터셋의 공격성 점수 예측 성능을 보기 위해 실험을 진행함
 
 ### Comment의 공격성 정도에 대한 점수 산출 방법 
 
 - Best-Worst Scaling 방법을 사용함
-- 설문조사를 통해 사람들에게 4개의 comment들 중 가장 공격적인 comment와 가장 공격적이지 않은 comment를 선정하도록 요청
+- 설문조사를 통해 사람들에게 4개의 comment들 중 가장 공격적인 comment와 가장 공격적이지 않은 comment를 선정하도록 요청
 
 점수 산출 방법  
       가장 공격적인 것으로 선정된 비율 – 가장 공격적이지 않은 것으로 선정된 비율
@@ -149,5 +149,5 @@ Past Jigsaw Competitions in Kaggle 
 
 IDE : (main) 캐글 노트북(Kaggle Notebook) / (sub) 구글 코랩(Google Colab)
 - 해당 대회가 노트북 제출 대회이기 때문에 캐글 노트북을 main 으로 결정
-- 구글 코랩을 Data EDA, Preprocessing,… 등 실험적인 과정이나 비상시에 사용하기 위한sub IDE로 결정
+- 구글 코랩을 Data EDA, Preprocessing,… 등 실험적인 과정이나 비상시에 사용하기 위한 sub IDE로 결정
 
