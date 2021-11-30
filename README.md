@@ -131,10 +131,23 @@ Past Jigsaw Competitions in Kaggle 
 
 
 ## Model List
-
+### Bi-GRU
 ![image](https://user-images.githubusercontent.com/69458840/144071887-03298f33-5206-49fd-9c67-322a427d21fb.png)
 
 - Bi-GRU가 런타임 절약 및 LSTM보다 성능 향상에 효과적 
 - 워드 임베딩 및 모델 튜닝으로 성능 개선이 필요해 보임
 
-작성중...
+### BERT-base
+![image](https://user-images.githubusercontent.com/69458840/144072355-462e20d9-7273-41c8-a3a6-8bd91675b553.png)
+- Luke Model은 성능도 우수하고, ROBERTA(-BASE)에 비해 학습 시간이 적기 때문에 사용.
+- 현재, Luke Model에 대한 이해와 코드 구현의 난이도가 높아 보류 중
+- 추후, 더 좋은 성능을 위해 다른 모델(PLM)을 조사 및 적용 예정. 
+
+## 프로젝트 수행 환경
+협업 tool : 노션(notion), 슬랙(Slack) 
+- 코드, 정보(Discussion 내용이나 관련 논문 내용 등) 및 실험 결과 공유
+
+IDE : (main) 캐글 노트북(Kaggle Notebook) / (sub) 구글 코랩(Google Colab)
+- 해당 대회가 노트북 제출 대회이기 때문에 캐글 노트북을 main 으로 결정
+- 구글 코랩을 Data EDA, Preprocessing,… 등 실험적인 과정이나 비상시에 사용하기 위한sub IDE로 결정
+
