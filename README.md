@@ -64,6 +64,7 @@ Past Jigsaw Competitions in Kaggle 
 - Jigsaw Uninteded Bias in Toxicity Classification (2019)
 - Jigsaw Multilingual Toxic Comment Classification (2020)
 
+
 ### Validation Data
 #### [Features]
 - Worker : 주석을 작성한 전문가의 Id (총 753명)
@@ -71,11 +72,35 @@ Past Jigsaw Competitions in Kaggle 
 - more_toxic : 상대적으로 유해한 코멘트
 
 #### [특 징]
-- 1) Pair Sentences 1세트당 3회 평가받음.  (3명의 다른 Worker가 평가)
-- 2) Worker 1명당 평가한 Pair Sentences 수가 다름. ( 예: 8, 68, ...)
+ 1) Pair Sentences 1세트당 3회 평가받음.  (3명의 다른 Worker가 평가)
+ 2) Worker 1명당 평가한 Pair Sentences 수가 다름. ( 예: 8, 68, ...)
+
+### Test Data
+
+- 데이터 수: 약 14,000개의 sample comment로 구성됨
+- 평가 방식: 각 comment에 대해 전문 평가자들이 평가한 순위의 평균과 예측 순위의 차이로 점수를 계산하는 것으로 해석함
+
+#### [특이점]
+- Public leaderbord에 사용되는 test data는 전체 test data의 5%
+- 해당 5% test data에만 맞춰서 학습하다보면 overfitting 되어 최종 95% test data에 대해서score가 떨어질 (Loss값이 증가할)가능성이 존재함.
+- 그러므로 다양한 종류의 toxic data를 학습하는 것이 유리할 것으로 예상됨.
 
 
-![image](https://user-images.githubusercontent.com/69458840/144070042-b7404cc7-8984-4983-b857-24094a901e10.png)
+## 관련 선행 연구
+### “Ruddit: Norms of Offensiveness for English Reddit Comments”
+- Hada et al. 2021. Association for Computational Linguistics  (ACL)
+- 소셜 뉴스 웹사이트인 Reddit에 사용자들이 남긴 comment를 데이터로 사용
+- 기존의 점수측정 방법론의 한계점을 해결한 ‘Best-Worst Scaling’라는 방법을 통해 신뢰도 높은 comment의 공격성 정도에 대한 점수(offensiveness scores)를 산출하여새로운 데이터 셋을 생성하고 제안하였음
+
+- 일반적으로 많이 사용하는 neural 모델들에 대해서 제안한  데이터셋의 공격성 점수 예측 성능을 보기 위해 실험을 진행함
+
+### Comment의 공격성 정도에 대한 점수 산출 방법 
+
+- Best-Worst Scaling 방법을 사용함
+- 설문조사를 통해 사람들에게 4개의 comment들 중 가장 공격적인 comment와 가장 공격적이지 않은 comment를 선정하도록 요청
+
+#### 점수 산출 방법  
+     - 가장 공격적인 것으로 선정된 비율 – 가장 공격적이지 않은 것으로 선정된 비율
 
 
 작성중...
