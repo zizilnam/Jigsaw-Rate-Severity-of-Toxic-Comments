@@ -99,8 +99,42 @@ Past Jigsaw Competitions in Kaggle 
 - Best-Worst Scaling 방법을 사용함
 - 설문조사를 통해 사람들에게 4개의 comment들 중 가장 공격적인 comment와 가장 공격적이지 않은 comment를 선정하도록 요청
 
-#### 점수 산출 방법  
-     - 가장 공격적인 것으로 선정된 비율 – 가장 공격적이지 않은 것으로 선정된 비율
+점수 산출 방법  
+      가장 공격적인 것으로 선정된 비율 – 가장 공격적이지 않은 것으로 선정된 비율
 
+
+- SHR Pearson r 값이 약 0.88( ≈ 0.88)이 나와 점수측정에 대해 높은 신뢰도가 있다고 판단함
+- 점수 값의 분포에 대한 분산이 적었음
+- 흥분도가 높은 comment가 공격성 점수와 높은 상관관계가 있다는 것을 보여줌
+
+### Result Analysis
+#### Bidirectional LSTM / BERT / HateBERT 에 제안한 데이셋을 사용하여 학습 및 예측
+- Ruddit 외에 다른 데이터셋에서 비슷한 결과 도출
+- 욕설이 없는 데이터셋에서 성능이 저하
+- 모든 모델이 극단적으로 공격적이거나 그렇지 않은 스코어 예측 성능은 좋음
+- 그 사이에 있는 스코어 예측은 성능이 비교적 좋지 않음
+- HateBERT는 사이 스코어 예측에 좋은 성능을 보임
+- Bi-LSTM의 이 데이터에 대한 성능 저하는 간단한 모델 구조와 워드 임베딩의 영향일 수 있음
+
+### 선행 연구를 통한 Insight
+
+#### dataset 구성 방법에 대한 Insight
+
+- 선행연구의 dataset을 생성하는 방법론은 설문조사를 해야하는 것이 선행되어야 한다는 조건이 있어 해당 방법을 수행하는 데에 한계가 있음
+- 해당 dataset가 공개되어 있으므로 train data로 활용하기로 결정
+
+#### Modeling에 대한 Insight
+
+- Bi-LSTM 모델에 비해 가볍고 성능이 더 우수한 Bi-GRU 모델을 적용 예정
+- HateBERT는 좋은 성능을 보였기에, 이번 Competition에 적용 예정
+- HateBERT 외의 다른 Pretrained Language Model 사용하여 성능 확인 필요
+
+
+## Model List
+
+![image](https://user-images.githubusercontent.com/69458840/144071887-03298f33-5206-49fd-9c67-322a427d21fb.png)
+
+- Bi-GRU가 런타임 절약 및 LSTM보다 성능 향상에 효과적 
+- 워드 임베딩 및 모델 튜닝으로 성능 개선이 필요해 보임
 
 작성중...
