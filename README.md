@@ -49,15 +49,15 @@ MRL보다 학습이 덜 될수는 있지만, x1, x2의 차이가 적은 경우�
 
 ### Train data
 
-Train dataset 부재 (Validation_data 존재)
+- Train dataset 부재 (Validation_data 존재)
 
-[Important Point] 지난 Kaggle Jigsaw Competition에서의 train data를 가공하여, 모델 학습시킬 예정.
+- [Important Point] 지난 Kaggle Jigsaw Competition에서의 train data를 가공하여, 모델 학습시킬 예정.
 
-지난 JigsawCompetition의 Task와 다르기 때문에 이번 대회의 Task에 맞게 가공이 필요.
+- 지난 JigsawCompetition의 Task와 다르기 때문에 이번 대회의 Task에 맞게 가공이 필요.
 
-가공 내용: 지난 JigsawCompetition의 데이터의 comment와 toxic_score를 가져와서 합치는 작업
+- 가공 내용: 지난 JigsawCompetition의 데이터의 comment와 toxic_score를 가져와서 합치는 작업
 
-경우에 따라, Validation data도 모델 학습에 사용할 수도 있음.
+- 경우에 따라, Validation data도 모델 학습에 사용할 수도 있음.
 
 Past Jigsaw Competitions in Kaggle 
 - Toxic Comment Classification Challenge (2017)
