@@ -45,6 +45,7 @@ MRL보다 학습이 덜 될수는 있지만, x1, x2의 차이가 적은 경우�
 우리 모델의 목표는 문장들의 toxic한 정도를 비교해 순위를 예측하는 것이므로 MSE를 사용할 예정이다.
 
 
+
 ## 데이터 정의
 
 ### Train data
@@ -66,12 +67,12 @@ Past Jigsaw Competitions in Kaggle 
 
 
 ### Validation Data
-#### [Features]
+#### Features
 - Worker : 주석을 작성한 전문가의 Id (총 753명)
 - less_toxic : 상대적으로 무해한 코멘트
 - more_toxic : 상대적으로 유해한 코멘트
 
-#### [특 징]
+#### 특 징
  1) Pair Sentences 1세트당 3회 평가받음.  (3명의 다른 Worker가 평가)
  2) Worker 1명당 평가한 Pair Sentences 수가 다름. ( 예: 8, 68, ...)
 
